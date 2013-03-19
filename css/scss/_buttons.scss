@@ -3,33 +3,35 @@
 
 .btn {
 	display: inline-block;
-	padding: 0 30px;
+	padding: 10px 30px;
 	margin-bottom: 0;
-	font-size: #{$modular-scale-base}em;
+	font-family: $body-font;
+	font-size: #{$modular-scale-down1}em;
 	line-height: $line-height;
 	text-align: center;
-	color: $default-dark;
+	color: $dark;
 	vertical-align: middle;
 	cursor: pointer;
-	background-color: $default-light;
+	background-color: $light;
 	border: 1px solid;
-	border-color: darken($default-light, 10%);	
+	border-color: darken($light, 10%);	
 	@include border-radius(3px);
+    @include box-shadow(1px 1px 1px rgba(0, 0, 0, 0.1));
 	
 	&:hover {
-		background-color: darken($default-light, 5%);
-		border-color: darken($default-light, 15%);	
+		background-color: darken($light, 5%);
+		border-color: darken($light, 15%);	
 	}
 }
 
-.btn-default-dark {
+.btn-dark {
 	color: #eee;
-	background-color: $default-dark;
-	border-color: darken($default-dark, 10%);
+	background-color: $dark;
+	border-color: darken($dark, 10%);
 	
 	&:hover {
-		background-color: darken($default-dark, 5%);
-		border-color: darken($default-dark, 15%);	
+		background-color: darken($dark, 5%);
+		border-color: darken($dark, 15%);	
 	}
 }
 

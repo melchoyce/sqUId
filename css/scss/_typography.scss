@@ -2,7 +2,10 @@
 -------------------------------------------------------------- */
 
 body {
-    font: 62.5% $body-font;
+    font-family: $body-font;
+	font-size: $body-size;
+	line-height: $line-height;
+    color: $dark;
 }
 
 a {
@@ -23,10 +26,22 @@ h1 {
 
 h2 {
 	font-size: #{$modular-scale-up3}em;
+	margin-bottom: 15px;
 }
 
 h3 {
+	font-size: #{$modular-scale-up2}em;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+
+h4 {
 	font-size: #{$modular-scale-up1}em;
 	font-weight: 600;
+	text-transform: uppercase;	
+}
+
+h5 {
+	font-size: #{$modular-scale-down1}em;
 	text-transform: uppercase;
 }

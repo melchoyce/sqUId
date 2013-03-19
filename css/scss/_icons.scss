@@ -36,7 +36,7 @@ you can use the generic selector below, but it's slower:
 [class*="icon-"] {
 */
 .icon-view, .icon-upload, .icon-up, .icon-trash, .icon-star, .icon-search, .icon-save, .icon-right, .icon-menu, .icon-mail, .icon-pencil, .icon-link, .icon-download, .icon-home, .icon-down, .icon-comment, .icon-cog, .icon-check, .icon-chat, .icon-cancel, .icon-attach, .icon-add, .icon-left {
-	font-family: 'melicons';
+	font-family: 'melicons' !important;
 		speak: none;
 	/* Enable Ligatures */
 	-webkit-font-feature-settings:"liga","dlig";-moz-font-feature-settings:"liga=1, dlig=1";-moz-font-feature-settings:"liga","dlig";-ms-font-feature-settings:"liga","dlig";-o-font-feature-settings:"liga","dlig";
