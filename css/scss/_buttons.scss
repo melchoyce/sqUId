@@ -1,0 +1,67 @@
+/* =Buttons
+-------------------------------------------------------------- */
+
+.btn {
+	display: inline-block;
+	padding: 0 30px;
+	margin-bottom: 0;
+	font-size: #{$modular-scale-base}em;
+	line-height: $line-height;
+	text-align: center;
+	color: $default-dark;
+	vertical-align: middle;
+	cursor: pointer;
+	background-color: $default-light;
+	border: 1px solid;
+	border-color: darken($default-light, 10%);	
+	@include border-radius(3px);
+	
+	&:hover {
+		background-color: darken($default-light, 5%);
+		border-color: darken($default-light, 15%);	
+	}
+}
+
+.btn-default-dark {
+	color: #eee;
+	background-color: $default-dark;
+	border-color: darken($default-dark, 10%);
+	
+	&:hover {
+		background-color: darken($default-dark, 5%);
+		border-color: darken($default-dark, 15%);	
+	}
+}
+
+.btn-primary {
+	color: #eee;
+	background-color: $primary;
+	border-color: darken($primary, 10%);
+	
+	&:hover {
+		background-color: darken($primary, 5%);
+		border-color: darken($primary, 15%);	
+	}
+}
+
+.btn-secondary {
+	color: #eee;
+	background-color: $secondary;
+	border-color: darken($secondary, 10%);
+	
+	&:hover {
+		background-color: darken($secondary, 5%);
+		border-color: darken($secondary, 15%);	
+	}
+}
+
+.btn-highlight {
+	color: #eee;
+	background-color: $highlight;
+	border-color: darken($highlight, 10%);
+	
+	&:hover {
+		background-color: darken($highlight, 5%);
+		border-color: darken($highlight, 15%);	
+	}
+}

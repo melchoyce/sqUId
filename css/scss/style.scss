@@ -1,7 +1,7 @@
 /*
 
    =Apprenticeship in User Experience Program
-   Challenge 1: Forms
+   Challenge 5: UI Kit
       
                             __
          o                 /' ) 
@@ -15,7 +15,6 @@
                                             `-`           ` 
    
    Mel Choyce
-   http://melchoyce.github.com/AUX-Challenge-Form/
    http://choycedesign.com
 
 */
@@ -26,4 +25,5 @@
 @import 'mixins';           // global mixins next to use variables and be accessible to rest of stylesheets
 @import 'typography';       // base typographic system is established next
 @import 'icons';     		// importing icon font
+@import 'buttons';     		// importing button styles
 @import 'global';           // global style rules are defined last so they can use all the previous sheets

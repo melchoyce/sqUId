@@ -1,8 +1,6 @@
 /* =Typography
 -------------------------------------------------------------- */
 
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,600,700);
-
 body {
     font: 62.5% $body-font;
 }
@@ -18,6 +16,17 @@ em {
     font-style: italic;
 }
 
-h1, h2, h3, h4, h5 {
-    font-family: $header-font;
+h1 {
+	font-size: #{$modular-scale-up5}em;
+	font-weight: 300;
+}
+
+h2 {
+	font-size: #{$modular-scale-up3}em;
+}
+
+h3 {
+	font-size: #{$modular-scale-up1}em;
+	font-weight: 600;
+	text-transform: uppercase;
 }

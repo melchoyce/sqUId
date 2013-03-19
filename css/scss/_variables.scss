@@ -2,13 +2,30 @@
 -------------------------------------------------------------- */
 
 // Colors
-$dark-grey:         #5a5a5a; // primary
-$light-grey:        #f3f5f5; // secondary
+$light-grey:			#eee; // default-light
+$dark-grey:				#42545c; // default-dark
+$blue:					#0074a2; // primary
+$green:					#36a294; // secondary
+$red:					#d3683e; // highlight
 
 // Scheme
-$primary: 			$dark-grey;
-$secondary:			$light-grey;
+$default-light:			$light-grey;
+$default-dark:			$dark-grey;
+$primary:				$blue;
+$secondary:				$green;
+$highlight:				$red;
+
+// Modular Scale : 16 and 23 @ 1.618 - http://modularscale.com/ ================================== /
+$modular-scale-up5:		6;   	// 60px
+$modular-scale-up4:		4.2; 	// 42px
+$modular-scale-up3:		3.7; 	// 37px
+$modular-scale-up2:		2.6; 	// 26px
+$modular-scale-up1:		2.2; 	// 22px
+$modular-scale-base:	1.6;  	// 16px
+$modular-scale-down1:	1.4;  	// 14px
+$modular-scale-down2:	1;  	// 10px
 
 // Typography
-$body-font:         "Open Sans", sans-serif;
-$line-height:       1.4;
+$body-font:				"Open Sans", sans-serif;
+$body-size:				#{$modular-scale-base}em;
+$line-height:			#{$modular-scale-up1}em;
