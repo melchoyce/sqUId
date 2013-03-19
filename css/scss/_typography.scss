@@ -1,0 +1,24 @@
+/* =Typography
+-------------------------------------------------------------- */
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,600,700);
+
+body {
+    font: 62.5% $body-font;
+}
+
+a {
+    
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+em {
+    font-style: italic;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: $header-font;
+}
+
