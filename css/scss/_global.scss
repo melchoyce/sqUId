@@ -18,7 +18,7 @@ body {
 
 #container {
 	max-width: 1000px;
-	margin: 0 auto;
+	margin: 0 auto 50px;
 }
 
 header {
@@ -29,6 +29,8 @@ header {
 	margin-right: 10px;
 }
 
-.button-icons {
+.buttons-disabled,
+.button-icons,
+.slider-navigation {
 	margin-top: 20px;
 }

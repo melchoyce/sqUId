@@ -1,0 +1,31 @@
+/* =Misc Items
+-------------------------------------------------------------- */
+
+/* Star Ratings */
+
+.icon-star.star-selected {
+	color: $highlight;
+}
+
+.icon-star.star-unselected {
+	color: $light;
+}
+
+/* Slider Navigation */
+
+.slider-nav {
+	display: inline-block;
+	margin-right: 5px;
+	width: 15px;
+	height: 15px;
+	@include border-radius(50%);
+}
+
+.slider-nav.slider-nav-selected {
+	background-color: $secondary;
+	border: 1px solid darken($secondary, 10%);
+}
+
+.slider-nav.slider-nav-unselected {
+	background-color: $light;
+}

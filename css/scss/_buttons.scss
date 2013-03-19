@@ -13,8 +13,7 @@
 	vertical-align: middle;
 	cursor: pointer;
 	background-color: $light;
-	border: 1px solid;
-	border-color: darken($light, 10%);	
+	border: 1px solid darken($light, 10%);	
 	@include border-radius(3px);
     @include box-shadow(1px 1px 1px rgba(0, 0, 0, 0.1));
 	
@@ -66,4 +65,15 @@
 		background-color: darken($highlight, 5%);
 		border-color: darken($highlight, 15%);	
 	}
+}
+
+button[disabled].btn {
+	cursor: default;
+	opacity: .6;
+    @include box-shadow(none);
+    
+    &:hover {
+    	background-color: inherit;
+    	border-color: inherit;	
+    }
 }

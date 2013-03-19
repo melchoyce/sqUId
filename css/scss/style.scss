@@ -26,4 +26,6 @@
 @import 'typography';       // base typographic system is established next
 @import 'icons';     		// importing icon font
 @import 'buttons';     		// importing button styles
+@import 'menus';     		// importing menu styles
+@import 'misc';     		// importing misc styles
 @import 'global';           // global style rules are defined last so they can use all the previous sheets

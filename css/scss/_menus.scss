@@ -1,0 +1,39 @@
+/* =Buttons
+-------------------------------------------------------------- */
+
+.menu {
+	display: inline;
+	font-size: #{$modular-scale-down1}em;
+	font-weight: 400;
+	text-transform: uppercase;
+	background-color: $dark;
+	border: 1px solid darken($dark, 10%);
+	@include border-radius(3px);
+	@include box-shadow(1px 1px 1px rgba(0, 0, 0, 0.1));
+}
+
+.menu-horizontal {
+	margin: 0;
+	padding: 10px 0;
+}
+
+.menu-horizontal li {
+	display: inline-block;
+	margin: 0;
+	border-right: 1px solid lighten($dark, 10%);
+
+	&:last-child {
+		border-right: none;
+	}
+	
+	a {
+		display: block;
+		padding: 0 20px;
+		color: $light;
+		text-decoration: none;
+
+		&:hover {
+			color: lighten($secondary, 10%);	
+		}
+	}
+}

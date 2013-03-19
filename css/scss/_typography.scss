@@ -26,19 +26,20 @@ h1 {
 }
 
 h2 {
+	margin: 30px 0 15px;
 	font-family: $header-font;
 	font-size: #{$modular-scale-up3}em;
-	margin-bottom: 15px;
 }
 
 h3 {
-	font-size: #{$modular-scale-up2}em;
-	font-weight: 600;
+	margin: 15px 0 5px;
+	font-family: $header-font;	
+	font-size: #{$modular-scale-up1}em;
 	text-transform: uppercase;
 }
 
 h4 {
-	font-size: #{$modular-scale-up1}em;
+	font-size: #{$modular-scale-base}em;
 	font-weight: 600;
 	text-transform: uppercase;	
 }

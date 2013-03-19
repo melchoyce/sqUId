@@ -82,17 +82,18 @@ h1 {
   font-weight: 300; }
 
 h2 {
+  margin: 30px 0 15px;
   font-family: "Open Sans Condensed", sans-serif;
-  font-size: 2.3125em;
-  margin-bottom: 15px; }
+  font-size: 2.3125em; }
 
 h3 {
-  font-size: 1.625em;
-  font-weight: 600;
+  margin: 15px 0 5px;
+  font-family: "Open Sans Condensed", sans-serif;
+  font-size: 1.4375em;
   text-transform: uppercase; }
 
 h4 {
-  font-size: 1.4375em;
+  font-size: 1em;
   font-weight: 600;
   text-transform: uppercase; }
 
@@ -237,8 +238,7 @@ you can use the generic selector below, but it's slower:
   vertical-align: middle;
   cursor: pointer;
   background-color: #eeeeee;
-  border: 1px solid;
-  border-color: #d4d4d4;
+  border: 1px solid #d4d4d4;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   -ms-border-radius: 3px;
@@ -281,6 +281,76 @@ you can use the generic selector below, but it's slower:
     background-color: #ca5a2e;
     border-color: #a04724; }
 
+button[disabled].btn {
+  cursor: default;
+  opacity: .6;
+  -webkit-box-shadow: none;
+  box-shadow: none; }
+  button[disabled].btn:hover {
+    background-color: inherit;
+    border-color: inherit; }
+
+/* =Buttons
+-------------------------------------------------------------- */
+.menu {
+  display: inline;
+  font-size: 0.875em;
+  font-weight: 400;
+  text-transform: uppercase;
+  background-color: #42545c;
+  border: 1px solid #2d393e;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -ms-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1); }
+
+.menu-horizontal {
+  margin: 0;
+  padding: 10px 0; }
+
+.menu-horizontal li {
+  display: inline-block;
+  margin: 0;
+  border-right: 1px solid #576f7a; }
+  .menu-horizontal li:last-child {
+    border-right: none; }
+  .menu-horizontal li a {
+    display: block;
+    padding: 0 20px;
+    color: #eeeeee;
+    text-decoration: none; }
+    .menu-horizontal li a:hover {
+      color: #49c2b3; }
+
+/* =Misc Items
+-------------------------------------------------------------- */
+/* Star Ratings */
+.icon-star.star-selected {
+  color: #d3683e; }
+
+.icon-star.star-unselected {
+  color: #eeeeee; }
+
+/* Slider Navigation */
+.slider-nav {
+  display: inline-block;
+  margin-right: 5px;
+  width: 15px;
+  height: 15px;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%; }
+
+.slider-nav.slider-nav-selected {
+  background-color: #36a294;
+  border: 1px solid #297c71; }
+
+.slider-nav.slider-nav-unselected {
+  background-color: #eeeeee; }
+
 /* =Global
 -------------------------------------------------------------- */
 * {
@@ -291,7 +361,7 @@ you can use the generic selector below, but it's slower:
 /* Structure */
 #container {
   max-width: 1000px;
-  margin: 0 auto; }
+  margin: 0 auto 50px; }
 
 header {
   text-align: center; }
@@ -299,5 +369,7 @@ header {
 #buttons .btn {
   margin-right: 10px; }
 
-.button-icons {
+.buttons-disabled,
+.button-icons,
+.slider-navigation {
   margin-top: 20px; }
