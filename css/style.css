@@ -77,10 +77,12 @@ em {
   font-style: italic; }
 
 h1 {
+  font-family: "Open Sans Condensed", sans-serif;
   font-size: 3.75em;
   font-weight: 300; }
 
 h2 {
+  font-family: "Open Sans Condensed", sans-serif;
   font-size: 2.3125em;
   margin-bottom: 15px; }
 
@@ -293,6 +295,9 @@ you can use the generic selector below, but it's slower:
 
 header {
   text-align: center; }
+
+#buttons .btn {
+  margin-right: 10px; }
 
 .button-icons {
   margin-top: 20px; }

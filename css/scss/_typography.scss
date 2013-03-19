@@ -20,11 +20,13 @@ em {
 }
 
 h1 {
+	font-family: $header-font;
 	font-size: #{$modular-scale-up5}em;
 	font-weight: 300;
 }
 
 h2 {
+	font-family: $header-font;
 	font-size: #{$modular-scale-up3}em;
 	margin-bottom: 15px;
 }
