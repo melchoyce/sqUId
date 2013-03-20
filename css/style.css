@@ -224,6 +224,14 @@ you can use the generic selector below, but it's slower:
 .icon-left:before {
   content: "\61\72\72\6c\65\66\74"; }
 
+.icon-container {
+  display: inline-block;
+  margin: 5px 15px 5px 0;
+  padding: 5px 10px;
+  width: 15em;
+  font-size: 1em;
+  background: #eeeeee; }
+
 /* =Buttons
 -------------------------------------------------------------- */
 .btn {
@@ -358,13 +366,25 @@ button[disabled].btn {
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
+body {
+  background-color: #eeeeee; }
+
 /* Structure */
 #container {
+  margin: 50px auto 100px;
+  padding: 50px;
   max-width: 1000px;
-  margin: 0 auto 50px; }
+  background-color: white;
+  border: 1px solid #f9f9f9;
+  -webkit-box-shadow: 0, 0, 5px, rgba(0, 0, 0, 0.15);
+  box-shadow: 0, 0, 5px, rgba(0, 0, 0, 0.15); }
 
 header {
   text-align: center; }
+
+section {
+  margin: 50px 0;
+  border-top: 1px solid #eeeeee; }
 
 #buttons .btn {
   margin-right: 10px; }
