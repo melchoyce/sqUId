@@ -2,11 +2,12 @@
 -------------------------------------------------------------- */
 
 @font-face {
-	font-family: 'melicons';
-	src: url('../fonts/melicons.eot') format('embedded-opentype'), 
-	     url('../fonts/melicons.woff') format('woff'), 
-	     url('../fonts/melicons.ttf')  format('truetype'),
-	     url('../fonts/melicons.dev.svg#svgFontName') format('svg');
+    font-family: 'melicons';
+    src: url('melicons.eot');
+    src: url('melicons.eot?#iefix') format('embedded-opentype'),
+         url('melicons.woff') format('woff'),
+         url('melicons.ttf') format('truetype'),
+         url('melicons.svg#melicons') format('svg');
 }
 
 .icon-view, .icon-upload, .icon-up, .icon-trash, .icon-star, .icon-search, .icon-save, .icon-right, .icon-pencil, .icon-menu, .icon-mail, .icon-link, .icon-left, .icon-home, .icon-download, .icon-down, .icon-comment, .icon-cog, .icon-check, .icon-chat, .icon-cancel, .icon-attach, .icon-add {
