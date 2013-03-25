@@ -1,0 +1,39 @@
+/* =Forms
+-------------------------------------------------------------- */
+
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"] {
+	padding: 7px 0 7px 7px;
+	font-size: #{$modular-scale-down1}em;
+	color: $dark;
+	background-color: $input-bg;
+	border: 1px solid darken($input-bg, 10%);
+	@include border-radius(3px);
+	@include box-shadow(inset 0 2px 2px rgba(0,0,0,.05));
+}
+
+input[disabled] {
+	border: none;
+	@include box-shadow(inset 0 0 0 transparent);
+}
+
+input.success {
+	border: 2px solid $secondary;
+}
+
+input.error {
+	border: 2px solid $highlight;
+}

@@ -1,8 +1,6 @@
-/* =Variables
--------------------------------------------------------------- */
-
 // Colors
 $light-grey:			#eee; 		// default-light
+$medium-grey:			#efefef;	// input-bg
 $dark-grey:				#42545c; 	// default-dark
 $blue:					#0074a2;	// primary
 $green:					#36a294;	// secondary
@@ -14,6 +12,7 @@ $dark:					$dark-grey;
 $primary:				$blue;
 $secondary:				$green;
 $highlight:				$red;
+$input-bg:				$medium-grey;
 
 // Modular Scale : 16 and 23 @ 1.618 - http://modularscale.com/ ================================== /
 $modular-scale-up5:   	3.75;   	// 60px
@@ -30,3 +29,10 @@ $header-font:			"Open Sans Condensed", sans-serif;
 $body-font:				"Open Sans", sans-serif;
 $body-size:				#{$modular-scale-base}em;
 $line-height:			1.4;
+
+
+// Grid
+$max-width:       1000px;                 // set page max-width
+$column-width:    17%;                    // set column width
+$gutter-width:    2%;                     // set gutter width
+$maximum-columns: 10;                      // set max number of columns

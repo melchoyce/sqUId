@@ -34,12 +34,23 @@ section {
 	border-top: 1px solid $light;
 }
 
-#buttons .btn {
-	margin-right: 10px;
+#forms input {
+	width: columns(2);
+	margin-right: gutter();
 }
 
 .buttons-disabled,
 .button-icons,
 .slider-navigation {
 	margin-top: 20px;
+}
+
+#buttons .btn {
+	width: columns(2);
+	margin-right: gutter();
+	margin-bottom: 10px;
+}
+
+#buttons .btn:nth-of-type(5) {
+	margin-right: 0;
 }

@@ -10,17 +10,21 @@
 	line-height: $line-height;
 	text-align: center;
 	color: $dark;
-	vertical-align: middle;
 	cursor: pointer;
 	background-color: $light;
 	border: 1px solid darken($light, 10%);	
 	@include border-radius(3px);
     @include box-shadow(1px 1px 1px rgba(0, 0, 0, 0.1));
-	
+	@include transition (background-color .15s linear);
+
 	&:hover {
 		background-color: darken($light, 5%);
-		border-color: darken($light, 15%);	
+		border-color: darken($light, 15%);
 	}
+}
+button[disabled].btn:hover {
+	background-color: $light;
+	border: 1px solid darken($light, 10%);		
 }
 
 .btn-dark {
@@ -33,6 +37,10 @@
 		border-color: darken($dark, 15%);	
 	}
 }
+button[disabled].btn.btn-dark:hover {
+	background-color: $dark;
+	border-color: darken($dark, 10%);	
+}
 
 .btn-primary {
 	color: #eee;
@@ -43,6 +51,10 @@
 		background-color: darken($primary, 5%);
 		border-color: darken($primary, 15%);	
 	}
+}
+button[disabled].btn.btn-primary:hover {
+	background-color: $primary;
+	border-color: darken($primary, 10%);
 }
 
 .btn-secondary {
@@ -55,6 +67,10 @@
 		border-color: darken($secondary, 15%);	
 	}
 }
+button[disabled].btn.btn-secondary:hover {
+	background-color: $secondary;
+	border-color: darken($secondary, 10%);	
+}
 
 .btn-highlight {
 	color: #eee;
@@ -66,14 +82,13 @@
 		border-color: darken($highlight, 15%);	
 	}
 }
+button[disabled].btn.btn-highlight:hover {
+	background-color: $highlight;
+	border-color: darken($highlight, 10%);	
+}
 
 button[disabled].btn {
 	cursor: default;
 	opacity: .6;
     @include box-shadow(none);
-    
-    &:hover {
-    	background-color: inherit;
-    	border-color: inherit;	
-    }
 }

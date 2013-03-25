@@ -22,23 +22,50 @@
 			</hgroup>
 		</header>
 
+		<section id="forms">
+			<h3>Form Fields</h3>
+			<div id="row">
+				<input type="text" placeholder="active" />
+				<input type="text" placeholder="disabled" disabled />
+				<input type="text" class="success" placeholder="success" />
+				<input type="text" class="error" placeholder="error" />
+			</div>
+			<textarea></textarea>
+			<input type="radio" name="example" value="male">Yes
+			<input type="radio" name="example" value="female">No
+			<select>
+				<option>Option 1</option>
+				<option>Option 2</option>
+				<option>Option 3</option>
+				<option>Option 4</option>
+				<option>Option 5</option>
+			</select>
+		</section>
 		<section id="buttons">
 			<h2>Buttons</h2>
 			<div class="buttons-enabled">
 				<h3>Enabled</h3>
-				<button class="btn">Default</button>
-				<button class="btn btn-dark">Default Dark</button>
-				<button class="btn btn-primary">Primary</button>
-				<button class="btn btn-secondary">Secondary</button>
-				<button class="btn btn-highlight">Highlight</button>
+				<div class="row">
+					<button class="btn">Default</button>
+					<button class="btn btn-dark">Default Dark</button>
+				</div>
+				<div class="row">
+					<button class="btn btn-primary">Primary</button>
+					<button class="btn btn-secondary">Secondary</button>
+					<button class="btn btn-highlight">Highlight</button>
+				</div>
 			</div>
 			<div class="buttons-disabled">
 				<h3>Disabled</h3>
-				<button class="btn" disabled>Default</button>
-				<button class="btn btn-dark" disabled>Default Dark</button>
-				<button class="btn btn-primary" disabled>Primary</button>
-				<button class="btn btn-secondary" disabled>Secondary</button>
-				<button class="btn btn-highlight" disabled>Highlight</button>
+				<div class="row">
+					<button class="btn" disabled>Default</button>
+					<button class="btn btn-dark" disabled>Default Dark</button>
+				</div>
+				<div class="row">
+					<button class="btn btn-primary" disabled>Primary</button>
+					<button class="btn btn-secondary" disabled>Secondary</button>
+					<button class="btn btn-highlight" disabled>Highlight</button>
+				</div>
 			</div>
 			<div class="button-icons">
 				<h3>With Icons</h3>
@@ -49,7 +76,7 @@
 		
 		<section id="menus">
 			<h2>Menus</h2>
-			<ul class="menu menu-horizontal" role="navigation">
+			<ul class="menu menu-horizontal span_6" role="navigation">
 				<li><a href="#">Home</a></li>
 				<li><a href="#">About</a></li>
 				<li><a href="#">Product</a></li>
