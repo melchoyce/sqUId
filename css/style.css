@@ -101,7 +101,7 @@ h5 {
 -------------------------------------------------------------- */
 @font-face {
   font-family: 'melicons';
-  src: url("/fonts/melicons.eot"); }
+  src: url("../fonts/melicons.eot"); }
 
 /* Use the following CSS code if you want to have a class per icon */
 /*
@@ -232,7 +232,8 @@ you can use the generic selector below, but it's slower:
 .btn.right-icon {
   padding: 0 10px;
   height: 40px;
-  line-height: 40px; }
+  line-height: 40px;
+  font-weight: 600; }
 
 .left-icon:before {
   float: left;
