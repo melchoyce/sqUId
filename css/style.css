@@ -133,7 +133,7 @@ you can use the generic selector below, but it's slower:
   content: "\75\70\6c\6f\61\64"; }
 
 .icon-up:before {
-  content: "\61\72\72\75\70"; }
+  content: "\61\72\75\70"; }
 
 .icon-trash:before {
   content: "\74\72\61\73\68"; }
@@ -148,7 +148,10 @@ you can use the generic selector below, but it's slower:
   content: "\73\61\76\65"; }
 
 .icon-right:before {
-  content: "\61\72\72\72\69\67\68\74"; }
+  content: "\61\72\72\69\67\68\74"; }
+
+.icon-pencil:before {
+  content: "\70\65\6e\63\69\6c"; }
 
 .icon-menu:before {
   content: "\6d\65\6e\75"; }
@@ -156,20 +159,20 @@ you can use the generic selector below, but it's slower:
 .icon-mail:before {
   content: "\6d\61\69\6c"; }
 
-.icon-pencil:before {
-  content: "\70\65\6e\63\69\6c"; }
-
 .icon-link:before {
   content: "\6c\69\6e\6b"; }
 
-.icon-download:before {
-  content: "\64\6f\77\6e\6c\6f\61\64"; }
+.icon-left:before {
+  content: "\61\72\6c\65\66\74"; }
 
 .icon-home:before {
   content: "\68\6f\6d\65"; }
 
+.icon-download:before {
+  content: "\64\6f\77\6e\6c\6f\61\64"; }
+
 .icon-down:before {
-  content: "\61\72\72\64\6f\77\6e"; }
+  content: "\61\72\64\6f\77\6e"; }
 
 .icon-comment:before {
   content: "\63\6f\6d\6d\65\6e\74"; }
@@ -191,9 +194,6 @@ you can use the generic selector below, but it's slower:
 
 .icon-add:before {
   content: "\61\64\64"; }
-
-.icon-left:before {
-  content: "\61\72\72\6c\65\66\74"; }
 
 .icon-view:before,
 .icon-upload:before,
@@ -227,6 +227,24 @@ you can use the generic selector below, but it's slower:
   width: 15em;
   font-size: 1em;
   background: #eeeeee; }
+
+.btn.left-icon,
+.btn.right-icon {
+  padding: 0 10px;
+  height: 40px;
+  line-height: 40px; }
+
+.left-icon:before {
+  float: left;
+  margin-right: 10px;
+  padding: 0 10px 0 0;
+  border-right: 1px solid rgba(0, 0, 0, 0.15); }
+
+.right-icon:before {
+  float: right;
+  margin-left: 10px;
+  padding: 0 0 0 10px;
+  border-left: 1px solid rgba(0, 0, 0, 0.15); }
 
 /* =Buttons
 -------------------------------------------------------------- */
@@ -392,11 +410,34 @@ input.error {
 /* =Misc Items
 -------------------------------------------------------------- */
 /* Star Ratings */
-.icon-star.star-selected {
-  color: #d3683e; }
+.rating {
+  float: left; }
 
-.icon-star.star-unselected {
+/* :not(:checked) is a filter, so that browsers that don’t support :checked don’t 
+   follow these rules. Every browser that supports :checked also supports :not(), so
+   it doesn’t make the test unnecessarily selective */
+.rating:not(:checked) > input {
+  position: absolute;
+  top: -9999px;
+  clip: rect(0, 0, 0, 0); }
+
+.rating:not(:checked) > label {
+  float: right;
+  width: 1em;
+  overflow: hidden;
+  white-space: nowrap;
+  cursor: pointer;
   color: #eeeeee; }
+
+.rating > input:checked ~ label,
+.rating:not(:checked) > label:hover,
+.rating:not(:checked) > label:hover ~ label,
+.rating > input:checked + label:hover,
+.rating > input:checked + label:hover ~ label,
+.rating > input:checked ~ label:hover,
+.rating > input:checked ~ label:hover ~ label,
+.rating > label:hover ~ input:checked ~ label {
+  color: #d3683e; }
 
 /* Slider Navigation */
 .slider-nav {
@@ -459,3 +500,15 @@ section {
 
 #buttons .btn:nth-of-type(5) {
   margin-right: 0; }
+
+#buttons .button-icons .btn {
+  width: auto;
+  margin-right: 10px; }
+
+.star-ratings {
+  *zoom: 1; }
+  .star-ratings:before, .star-ratings:after {
+    content: " ";
+    display: table; }
+  .star-ratings:after {
+    clear: both; }

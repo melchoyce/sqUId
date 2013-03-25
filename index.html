@@ -30,9 +30,9 @@
 				<input type="text" class="success" placeholder="success" />
 				<input type="text" class="error" placeholder="error" />
 			</div>
-			<textarea></textarea>
-			<input type="radio" name="example" value="male">Yes
-			<input type="radio" name="example" value="female">No
+			<input type="radio" name="example" value="unchecked">Unchecked
+			<input type="radio" name="example" value="checked" checked>Checked
+			<input type="radio" name="example" value="disabled" disabled>Disabled
 			<select>
 				<option>Option 1</option>
 				<option>Option 2</option>
@@ -40,43 +40,40 @@
 				<option>Option 4</option>
 				<option>Option 5</option>
 			</select>
+			<textarea></textarea>
 		</section>
 		<section id="buttons">
 			<h2>Buttons</h2>
 			<div class="buttons-enabled">
-				<h3>Enabled</h3>
 				<div class="row">
 					<button class="btn">Default</button>
-					<button class="btn btn-dark">Default Dark</button>
-				</div>
-				<div class="row">
-					<button class="btn btn-primary">Primary</button>
-					<button class="btn btn-secondary">Secondary</button>
-					<button class="btn btn-highlight">Highlight</button>
-				</div>
-			</div>
-			<div class="buttons-disabled">
-				<h3>Disabled</h3>
-				<div class="row">
 					<button class="btn" disabled>Default</button>
+					<button class="btn btn-dark">Default Dark</button>
 					<button class="btn btn-dark" disabled>Default Dark</button>
 				</div>
 				<div class="row">
+					<button class="btn btn-primary">Primary</button>
 					<button class="btn btn-primary" disabled>Primary</button>
+					<button class="btn btn-secondary">Secondary</button>
 					<button class="btn btn-secondary" disabled>Secondary</button>
+				</div>
+				<div class="row">
+					<button class="btn btn-highlight">Highlight</button>
 					<button class="btn btn-highlight" disabled>Highlight</button>
 				</div>
 			</div>
 			<div class="button-icons">
 				<h3>With Icons</h3>
-				<button class="btn btn-secondary left-icon icon-download">Download</button>
+				<button class="btn btn-primary left-icon icon-save">Save</button>
+				<button class="btn btn-secondary left-icon icon-upload">Upload</button>
+				<button class="btn btn-secondary right-icon icon-download">Download</button>
 				<button class="btn btn-highlight right-icon icon-cancel">Cancel</button>
 			</div>
 		</section>
 		
 		<section id="menus">
 			<h2>Menus</h2>
-			<ul class="menu menu-horizontal span_6" role="navigation">
+			<ul class="menu menu-horizontal" role="navigation">
 				<li><a href="#">Home</a></li>
 				<li><a href="#">About</a></li>
 				<li><a href="#">Product</a></li>
@@ -89,11 +86,13 @@
 			<h2>Miscellaneous</h2>		
 			<div class="star-ratings">
 				<h3>Star Ratings</h3>
-				<span class="icon-star star-selected"></span>
-				<span class="icon-star star-selected"></span>
-				<span class="icon-star star-selected"></span>
-				<span class="icon-star star-unselected"></span>
-				<span class="icon-star star-unselected"></span>
+				<fieldset class="rating">
+				    <input type="radio" id="star5" name="rating" value="5" /><label for="star5" title="5 Stars" class="icon-star"></label>
+				    <input type="radio" class="icon-star" id="star4" name="rating" value="4" /><label for="star4" title="4 Stars" class="icon-star"></label>
+				    <input type="radio" class="icon-star" id="star3" name="rating" value="3" /><label for="star3" title="3 Stars" class="icon-star"></label>
+				    <input type="radio" class="icon-star" id="star2" name="rating" value="2" /><label for="star2" title="2 Stars" class="icon-star"></label>
+				    <input type="radio" class="icon-star" id="star1" name="rating" value="1" /><label for="star1" title="1 Star" class="icon-star"></label>
+				</fieldset>
 			</div>
 			<div class="slider-navigation">
 				<h3>Slider Navigation</h3>

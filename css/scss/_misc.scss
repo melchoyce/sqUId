@@ -3,12 +3,39 @@
 
 /* Star Ratings */
 
-.icon-star.star-selected {
-	color: $highlight;
+// Code courtesy of http://lea.verou.me/2011/08/accessible-star-rating-widget-with-pure-css/
+
+.rating {
+    float: left;
 }
 
-.icon-star.star-unselected {
-	color: $light;
+/* :not(:checked) is a filter, so that browsers that don’t support :checked don’t 
+   follow these rules. Every browser that supports :checked also supports :not(), so
+   it doesn’t make the test unnecessarily selective */
+.rating:not(:checked) > input {
+    position: absolute;
+    top: -9999px;
+    clip: rect(0,0,0,0);
+}
+
+.rating:not(:checked) > label {
+    float: right;
+    width: 1em;
+    overflow: hidden;
+    white-space: nowrap;
+    cursor: pointer;
+    color: $light;
+}
+
+.rating > input:checked ~ label,
+.rating:not(:checked) > label:hover,
+.rating:not(:checked) > label:hover ~ label, 
+.rating > input:checked + label:hover,
+.rating > input:checked + label:hover ~ label,
+.rating > input:checked ~ label:hover,
+.rating > input:checked ~ label:hover ~ label,
+.rating > label:hover ~ input:checked ~ label {
+    color: $highlight;
 }
 
 /* Slider Navigation */

@@ -54,3 +54,14 @@ section {
 #buttons .btn:nth-of-type(5) {
 	margin-right: 0;
 }
+
+#buttons .button-icons .btn {
+	width: auto;
+	margin-right: 10px;
+}
+
+.star-ratings {
+	@include clearfix;
+}
+
+
