@@ -24,7 +24,7 @@
 
 		<section id="forms">
 			<h2>Form Fields</h2>
-			<div id="row">
+			<div class="row">
 				<input type="text" placeholder="active" />
 				<input type="text" placeholder="disabled" disabled />
 				<input type="text" class="success" placeholder="success" />
@@ -40,11 +40,10 @@
 				<option>Option 4</option>
 				<option>Option 5</option>
 			</select>
-			<textarea></textarea>
 		</section>
 		<section id="buttons">
 			<h2>Buttons</h2>
-			<div class="buttons-enabled">
+			<div id="regular-buttons">
 				<div class="row">
 					<button class="btn">Default</button>
 					<button class="btn" disabled>Default</button>
@@ -62,7 +61,7 @@
 					<button class="btn btn-highlight" disabled>Highlight</button>
 				</div>
 			</div>
-			<div class="button-icons">
+			<div id="button-icons">
 				<h3>With Icons</h3>
 				<button class="btn btn-primary left-icon icon-save">Save</button>
 				<button class="btn btn-secondary left-icon icon-upload">Upload</button>
@@ -72,37 +71,45 @@
 		</section>
 		
 		<section id="menus">
-			<h2>Menus</h2>
-			<ul class="menu menu-horizontal" role="navigation">
-				<li><a href="#">Home</a></li>
-				<li><a href="#">About</a></li>
-				<li><a href="#">Product</a></li>
-				<li><a href="#">Blog</a></li>
-				<li><a href="#">Contact</a></li>
-			</ul>
+			<h2>Menus and Navigation</h2>
+			<div id="horizontal-menus">
+				<h3>Horizontal Menus</h3>
+				<ul class="menu menu-horizontal" role="navigation">
+					<li><a href="#">Home</a></li>
+					<li><a href="#">About</a></li>
+					<li><a href="#">Product</a></li>
+					<li><a href="#">Blog</a></li>
+					<li><a href="#">Contact</a></li>
+				</ul>
+			<div id="breadcrumbs">
+				<h3>Breadcrumbs</h3>
+				<ul class="breadcrumbs">
+					<li><a href="#"><span class="icon-home"></span></a></li>
+					<li><a href="#">About</a></li>
+					<li>Team</li>
+				</ul>
+			</div>
 		</section>
 		
 		<section id="misc">
-			<h2>Miscellaneous</h2>		
-			<div class="star-ratings">
+			<h2>Miscellaneous</h2>
+			<div id="rating">
 				<h3>Star Ratings</h3>
-				<fieldset class="rating">
-				    <input type="radio" id="star5" name="rating" value="5" /><label for="star5" title="5 Stars" class="icon-star"></label>
-				    <input type="radio" class="icon-star" id="star4" name="rating" value="4" /><label for="star4" title="4 Stars" class="icon-star"></label>
-				    <input type="radio" class="icon-star" id="star3" name="rating" value="3" /><label for="star3" title="3 Stars" class="icon-star"></label>
-				    <input type="radio" class="icon-star" id="star2" name="rating" value="2" /><label for="star2" title="2 Stars" class="icon-star"></label>
-				    <input type="radio" class="icon-star" id="star1" name="rating" value="1" /><label for="star1" title="1 Star" class="icon-star"></label>
+				<fieldset class="star-ratings">
+				    <input type="radio" class="icon-star" id="star5" name="star-ratings" value="5" /><label for="star5" title="5 Stars" class="icon-star"></label>
+				    <input type="radio" class="icon-star" id="star4" name="star-ratings" value="4" /><label for="star4" title="4 Stars" class="icon-star"></label>
+				    <input type="radio" class="icon-star" id="star3" name="star-ratings" value="3" /><label for="star3" title="3 Stars" class="icon-star"></label>
+				    <input type="radio" class="icon-star" id="star2" name="star-ratings" value="2" /><label for="star2" title="2 Stars" class="icon-star"></label>
+				    <input type="radio" class="icon-star" id="star1" name="star-ratings" value="1" /><label for="star1" title="1 Star" class="icon-star"></label>
 				</fieldset>
 			</div>
-			<div class="slider-navigation">
+			<div id="slider-nav">
 				<h3>Slider Navigation</h3>
-				<input type="radio" name="slider-navigation" id="slide-1" /><label for="slide-1"></label>
-				<input type="radio" name="slider-navigation" id="slide-2" /><label for="slide-2"></label>
-				<input type="radio" name="slider-navigation" id="slide-3" /><label for="slide-3"></label>
-				
-				<div class="slider-nav slider-nav-selected"></div>
-				<div class="slider-nav slider-nav-unselected"></div>
-				<div class="slider-nav slider-nav-unselected"></div>
+				<fieldset class="slider-navigation">
+					<input type="radio" name="slider-navigation" id="slide-1" /><label for="slide-1"></label>
+					<input type="radio" name="slider-navigation" id="slide-2" /><label for="slide-2"></label>
+					<input type="radio" name="slider-navigation" id="slide-3" /><label for="slide-3"></label>
+				</fieldset>
 			</div>
 		</section>
 		
@@ -203,8 +210,5 @@
 		</section>
 
 	</div>
-
-	<!-- JS -->
-	<!--[if lte IE 7]><script src="lte-ie7.js"></script><![endif]-->
 </body>
 </html>

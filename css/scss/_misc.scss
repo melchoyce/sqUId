@@ -1,24 +1,69 @@
 /* =Misc Items
 -------------------------------------------------------------- */
 
-/* Star Ratings */
+/* Breadcrumbs */
 
-// Code hacked from http://lea.verou.me/2011/08/accessible-star-rating-widget-with-pure-css/
+.breadcrumbs {
+	margin: 0;
+	padding: 10px 0;
+	font-size: #{$modular-scale-down1}em;
+	font-weight: 400;
+	text-transform: uppercase;
+	color: $dark;
+	background-color: $light;
+	border: 1px solid darken($light, 10%);
+	@include border-radius(3px);
+	@include box-shadow(1px 1px 1px rgba(0, 0, 0, 0.1));
+}
 
-.rating {
+.breadcrumbs li {
+	display: inline-block;
+	margin: 0;
+	padding-left: 20px;
+
+	&:last-child {
+		padding-right: 20px;
+		border-right: none;
+	}
+	
+	a {
+		display: block;
+		color: $highlight;
+		font-weight: 600;
+		text-decoration: none;
+
+		&:hover {
+			color: lighten($secondary, 10%);	
+		}
+
+		&:after {
+			padding-left: 20px;
+			content: ">";
+			font-weight: 300;
+			color: lighten($dark, 50%);
+		}
+	}
+}
+
+
+/* Star star-ratingss */
+
+// Code hacked from http://lea.verou.me/2011/08/accessible-star-star-ratings-widget-with-pure-css/
+
+.star-ratings {
     float: left;
 }
 
 /* :not(:checked) is a filter, so that browsers that don’t support :checked don’t 
    follow these rules. Every browser that supports :checked also supports :not(), so
    it doesn’t make the test unnecessarily selective */
-.rating:not(:checked) > input {
+.star-ratings:not(:checked) > input {
     position: absolute;
     top: -9999px;
     clip: rect(0,0,0,0);
 }
 
-.rating:not(:checked) > label {
+.star-ratings:not(:checked) > label {
     float: right;
     width: 1em;
     overflow: hidden;
@@ -27,14 +72,14 @@
     color: $light;
 }
 
-.rating > input:checked ~ label,
-.rating:not(:checked) > label:hover,
-.rating:not(:checked) > label:hover ~ label, 
-.rating > input:checked + label:hover,
-.rating > input:checked + label:hover ~ label,
-.rating > input:checked ~ label:hover,
-.rating > input:checked ~ label:hover ~ label,
-.rating > label:hover ~ input:checked ~ label {
+.star-ratings > input:checked ~ label,
+.star-ratings:not(:checked) > label:hover,
+.star-ratings:not(:checked) > label:hover ~ label, 
+.star-ratings > input:checked + label:hover,
+.star-ratings > input:checked + label:hover ~ label,
+.star-ratings > input:checked ~ label:hover,
+.star-ratings > input:checked ~ label:hover ~ label,
+.star-ratings > label:hover ~ input:checked ~ label {
     color: $highlight;
 }
 

@@ -101,8 +101,7 @@ h5 {
 -------------------------------------------------------------- */
 @font-face {
   font-family: 'melicons';
-  src: url("../fonts/melicons.eot");
-  src: url("../fonts/melicons.eot?#iefix") format("embedded-opentype"), url("../fonts/melicons.woff") format("woff"), url("../fonts/melicons.ttf") format("truetype"), url("../fonts/melicons.svg#melicons") format("svg"); }
+  src: url("../fonts/melicons.eot"); }
 
 .icon-view, .icon-upload, .icon-up, .icon-trash, .icon-star, .icon-search, .icon-save, .icon-right, .icon-pencil, .icon-menu, .icon-mail, .icon-link, .icon-left, .icon-home, .icon-download, .icon-down, .icon-comment, .icon-cog, .icon-check, .icon-chat, .icon-cancel, .icon-attach, .icon-add {
   font-family: 'melicons';
@@ -332,21 +331,7 @@ button[disabled].btn {
 
 /* =Forms
 -------------------------------------------------------------- */
-textarea,
-input[type="text"],
-input[type="password"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="date"],
-input[type="month"],
-input[type="time"],
-input[type="week"],
-input[type="number"],
-input[type="email"],
-input[type="url"],
-input[type="search"],
-input[type="tel"],
-input[type="color"] {
+input[type="email"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="url"], input[type="color"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="time"], input[type="week"], textarea {
   padding: 7px 0 7px 7px;
   font-size: 0.875em;
   color: #42545c;
@@ -365,15 +350,33 @@ input[disabled] {
   box-shadow: inset 0 0 0 transparent; }
 
 input.success {
+  background-color: #e2f5f3;
   border: 2px solid #36a294; }
+  input.success.placeholder {
+    color: #36a294; }
+  input.success:-moz-placeholder {
+    color: #36a294; }
+  input.success:-ms-input-placeholder {
+    color: #36a294; }
+  input.success::-webkit-input-placeholder {
+    color: #36a294; }
 
 input.error {
+  background-color: #f9eae4;
   border: 2px solid #d3683e; }
+  input.error.placeholder {
+    color: #d3683e; }
+  input.error:-moz-placeholder {
+    color: #d3683e; }
+  input.error:-ms-input-placeholder {
+    color: #d3683e; }
+  input.error::-webkit-input-placeholder {
+    color: #d3683e; }
 
 /* =Menus
 -------------------------------------------------------------- */
 .menu {
-  display: inline;
+  display: inline-block;
   font-size: 0.875em;
   font-weight: 400;
   text-transform: uppercase;
@@ -399,6 +402,7 @@ input.error {
   .menu-horizontal li a {
     display: block;
     padding: 0 20px;
+    font-weight: 400;
     color: #eeeeee;
     text-decoration: none; }
     .menu-horizontal li a:hover {
@@ -406,19 +410,56 @@ input.error {
 
 /* =Misc Items
 -------------------------------------------------------------- */
-/* Star Ratings */
-.rating {
+/* Breadcrumbs */
+.breadcrumbs {
+  margin: 0;
+  padding: 10px 0;
+  font-size: 0.875em;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #42545c;
+  background-color: #eeeeee;
+  border: 1px solid #d4d4d4;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -ms-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1); }
+
+.breadcrumbs li {
+  display: inline-block;
+  margin: 0;
+  padding-left: 20px; }
+  .breadcrumbs li:last-child {
+    padding-right: 20px;
+    border-right: none; }
+  .breadcrumbs li a {
+    display: block;
+    color: #d3683e;
+    font-weight: 600;
+    text-decoration: none; }
+    .breadcrumbs li a:hover {
+      color: #49c2b3; }
+    .breadcrumbs li a:after {
+      padding-left: 20px;
+      content: ">";
+      font-weight: 300;
+      color: #c7d2d6; }
+
+/* Star star-ratingss */
+.star-ratings {
   float: left; }
 
 /* :not(:checked) is a filter, so that browsers that don’t support :checked don’t 
    follow these rules. Every browser that supports :checked also supports :not(), so
    it doesn’t make the test unnecessarily selective */
-.rating:not(:checked) > input {
+.star-ratings:not(:checked) > input {
   position: absolute;
   top: -9999px;
   clip: rect(0, 0, 0, 0); }
 
-.rating:not(:checked) > label {
+.star-ratings:not(:checked) > label {
   float: right;
   width: 1em;
   overflow: hidden;
@@ -426,14 +467,14 @@ input.error {
   cursor: pointer;
   color: #eeeeee; }
 
-.rating > input:checked ~ label,
-.rating:not(:checked) > label:hover,
-.rating:not(:checked) > label:hover ~ label,
-.rating > input:checked + label:hover,
-.rating > input:checked + label:hover ~ label,
-.rating > input:checked ~ label:hover,
-.rating > input:checked ~ label:hover ~ label,
-.rating > label:hover ~ input:checked ~ label {
+.star-ratings > input:checked ~ label,
+.star-ratings:not(:checked) > label:hover,
+.star-ratings:not(:checked) > label:hover ~ label,
+.star-ratings > input:checked + label:hover,
+.star-ratings > input:checked + label:hover ~ label,
+.star-ratings > input:checked ~ label:hover,
+.star-ratings > input:checked ~ label:hover ~ label,
+.star-ratings > label:hover ~ input:checked ~ label {
   color: #d3683e; }
 
 /* Slider Navigation */
@@ -490,6 +531,11 @@ input.error {
 body {
   background-color: #eeeeee; }
 
+a {
+  font-weight: 600;
+  color: #d3683e;
+  text-decoration: none; }
+
 /* Structure */
 #container {
   margin: 50px auto 100px;
@@ -511,27 +557,25 @@ section {
   width: 19.14894%;
   margin-right: 1.06383%; }
 
-.buttons-disabled,
-.button-icons,
-.slider-navigation {
-  margin-top: 20px; }
-
-#buttons .btn {
+#regular-buttons .btn {
   width: 19.14894%;
   margin-right: 1.06383%;
   margin-bottom: 10px; }
 
-#buttons .btn:nth-of-type(5) {
+#regular-buttons .btn:nth-of-type(5) {
   margin-right: 0; }
 
-#buttons .button-icons .btn {
+#regular-buttons .button-icons .btn {
   width: auto;
   margin-right: 10px; }
 
-.star-ratings {
+.breadcrumbs li a span {
+  font-size: 18px; }
+
+#rating {
   *zoom: 1; }
-  .star-ratings:before, .star-ratings:after {
+  #rating:before, #rating:after {
     content: " ";
     display: table; }
-  .star-ratings:after {
+  #rating:after {
     clear: both; }

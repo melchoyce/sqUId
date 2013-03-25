@@ -4,3 +4,20 @@
   -ms-border-radius: $radius;
   border-radius: $radius;
 }
+
+// Input-placeholder code grabbed from https://github.com/michaelsacca/Compass-Placeholder-Text-Mixin/blob/master/_placeholderText.scss
+
+@mixin input-placeholder($color) {
+  &.placeholder {
+    color: $color; 
+	}
+  &:-moz-placeholder {
+    color: $color; 
+	}
+  &:-ms-input-placeholder {
+    color: $color; 
+	}
+  &::-webkit-input-placeholder {
+    color: $color; 
+	} 
+}

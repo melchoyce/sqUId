@@ -1,21 +1,7 @@
 /* =Forms
 -------------------------------------------------------------- */
 
-textarea,
-input[type="text"],
-input[type="password"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="date"],
-input[type="month"],
-input[type="time"],
-input[type="week"],
-input[type="number"],
-input[type="email"],
-input[type="url"],
-input[type="search"],
-input[type="tel"],
-input[type="color"] {
+#{$all-text-inputs}, textarea {
 	padding: 7px 0 7px 7px;
 	font-size: #{$modular-scale-down1}em;
 	color: $dark;
@@ -31,9 +17,13 @@ input[disabled] {
 }
 
 input.success {
+	background-color: lighten($secondary, 50%);
 	border: 2px solid $secondary;
+	@include input-placeholder($secondary);
 }
 
 input.error {
+	background-color: lighten($highlight, 40%);	
 	border: 2px solid $highlight;
+	@include input-placeholder($highlight);
 }

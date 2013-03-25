@@ -13,6 +13,12 @@ body {
 	background-color: $light;
 }
 
+a {
+	font-weight: 600;
+	color: $highlight;
+	text-decoration: none;
+}
+
 
 /* Structure */
 
@@ -39,28 +45,26 @@ section {
 	margin-right: gutter();
 }
 
-.buttons-disabled,
-.button-icons,
-.slider-navigation {
-	margin-top: 20px;
-}
-
-#buttons .btn {
+#regular-buttons .btn {
 	width: columns(2);
 	margin-right: gutter();
 	margin-bottom: 10px;
 }
 
-#buttons .btn:nth-of-type(5) {
+#regular-buttons .btn:nth-of-type(5) {
 	margin-right: 0;
 }
 
-#buttons .button-icons .btn {
+#regular-buttons .button-icons .btn {
 	width: auto;
 	margin-right: 10px;
 }
 
-.star-ratings {
+.breadcrumbs li a span {
+	font-size: 18px;
+}
+
+#rating {
 	@include clearfix;
 }
 
