@@ -3,7 +3,7 @@
 
 /* Star Ratings */
 
-// Code courtesy of http://lea.verou.me/2011/08/accessible-star-rating-widget-with-pure-css/
+// Code hacked from http://lea.verou.me/2011/08/accessible-star-rating-widget-with-pure-css/
 
 .rating {
     float: left;
@@ -40,6 +40,8 @@
 
 /* Slider Navigation */
 
+// Code hacked frmo http://jsfiddle.net/ryanseddon/FeJT2/
+
 .slider-nav {
 	display: inline-block;
 	margin-right: 5px;
@@ -48,11 +50,32 @@
 	@include border-radius(50%);
 }
 
-.slider-nav.slider-nav-selected {
-	background-color: $secondary;
-	border: 1px solid darken($secondary, 10%);
+.slider-navigation input {
+	opacity:0;
+	position: absolute;
+	cursor: pointer;
 }
 
-.slider-nav.slider-nav-unselected {
+.slider-navigation input + label {
+	display: inline-block;
+	margin-right: 5px;
+	width: 15px;
+	height: 15px;
+    cursor: pointer;
+    vertical-align: middle;
 	background-color: $light;
+    background-repeat: no-repeat;
+	@include border-radius(50%);
+	@include transition (background-color .15s linear);    
+}
+
+.slider-navigation input:hover + label {
+	background-color: $highlight;
+	border: 1px solid darken($highlight, 10%);    
+}
+
+.slider-navigation input:checked + label {
+	background-position: 0 0;
+	background-color: $secondary;
+	border: 1px solid darken($secondary, 10%);    
 }

@@ -3,17 +3,15 @@
 
 @font-face {
 	font-family: 'melicons';
-	src:url('../fonts/melicons.eot');
+	src: url('../fonts/melicons.eot') format('embedded-opentype'), 
+	     url('../fonts/melicons.woff') format('woff'), 
+	     url('../fonts/melicons.ttf')  format('truetype'),
+	     url('../fonts/melicons.dev.svg#svgFontName') format('svg');
 }
 
-/* Use the following CSS code if you want to have a class per icon */
-/*
-Instead of a list of all class selectors,
-you can use the generic selector below, but it's slower:
-[class*="icon-"] {
-*/
-.icon-view, .icon-upload, .icon-up, .icon-trash, .icon-star, .icon-search, .icon-save, .icon-right, .icon-menu, .icon-mail, .icon-pencil, .icon-link, .icon-download, .icon-home, .icon-down, .icon-comment, .icon-cog, .icon-check, .icon-chat, .icon-cancel, .icon-attach, .icon-add, .icon-left {
-	speak: none;
+.icon-view, .icon-upload, .icon-up, .icon-trash, .icon-star, .icon-search, .icon-save, .icon-right, .icon-pencil, .icon-menu, .icon-mail, .icon-link, .icon-left, .icon-home, .icon-download, .icon-down, .icon-comment, .icon-cog, .icon-check, .icon-chat, .icon-cancel, .icon-attach, .icon-add {
+	font-family: 'melicons';
+		speak: none;
 	/* Enable Ligatures */
 	-webkit-font-feature-settings:"liga","dlig";-moz-font-feature-settings:"liga=1, dlig=1";-moz-font-feature-settings:"liga","dlig";-ms-font-feature-settings:"liga","dlig";-o-font-feature-settings:"liga","dlig";
 	font-feature-settings:"liga","dlig";
