@@ -30,3 +30,89 @@ input.error {
 	@include input-placeholder($highlight);
 	outline-color: lighten($highlight, 10%);
 }
+
+/* Checkboxes */
+
+input[type="checkbox"] {
+	display: none;
+}
+
+input[type="checkbox"] + label {
+	display: inline-block;
+	position: relative;
+	padding: 10px;
+	background-color: lighten($light, 20%);
+	border: 1px solid darken($light, 10%);
+	@include border-radius(3px);
+	cursor: pointer;
+}
+
+input[type="checkbox"]:checked + label {
+	background-color: lighten($primary, 70%);
+	border: 1px solid lighten($primary, 10%);
+}
+
+input[type="checkbox"]:checked + label:after {
+	font-family: 'melicons';
+	speak: none;
+	font-size: #{$modular-scale-down1}em;
+	-webkit-font-feature-settings:"liga","dlig";-moz-font-feature-settings:"liga=1, dlig=1";-moz-font-feature-settings:"liga","dlig";-ms-font-feature-settings:"liga","dlig";-o-font-feature-settings:"liga","dlig";
+	font-feature-settings:"liga","dlig";
+	text-rendering:optimizeLegibility;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	content: "\63\68\65\63\6b";	
+	position: absolute;
+	top: 3px;
+	left: 3px;
+	color: $primary;
+}
+
+input[type="checkbox"]:disabled + label {
+	background-color: darken($light, 10%);
+	border-color: darken($light, 20%);
+	opacity: .25;
+	cursor: default;
+}
+
+
+/* Radio Buttons */
+
+/*input[type="radio"] {
+	display: none;
+}
+
+input[type="radio"] + label {
+	-webkit-appearance: none;
+	background-color: #fafafa;
+	border: 1px solid #cacece;
+	padding: 9px;
+	border-radius: 50px;
+	display: inline-block;
+	position: relative;
+}
+
+input[type="radio"]:checked + label:after {
+	content: ' ';
+	width: 12px;
+	height: 12px;
+	border-radius: 50px;
+	position: absolute;
+	top: 3px;
+	background: #99a1a7;
+	text-shadow: 0px;
+	left: 3px;
+	font-size: 32px;
+}
+
+input[type="radio"]:checked + label {
+	background-color: #e9ecee;
+	color: #99a1a7;
+	border: 1px solid #adb8c0;
+}
+
+*/

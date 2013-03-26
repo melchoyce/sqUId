@@ -1,6 +1,26 @@
 /* =Misc Items
 -------------------------------------------------------------- */
 
+/* Progress Bars */
+
+.progress-bar {
+	padding: 1px;
+	height: 25px;
+	border: 2px solid $light;
+	@include border-radius(5px);
+}
+
+.progress {
+	display: block;
+	height: 100%;
+	background-color: $primary;
+	@include border-radius(2px);
+}
+
+/* Tooltips */
+
+
+
 /* Breadcrumbs */
 
 .breadcrumbs {
@@ -112,16 +132,14 @@
 	background-color: $light;
     background-repeat: no-repeat;
 	@include border-radius(50%);
-	@include transition (background-color .15s linear);    
+	@include transition (background-color .15s linear); 
 }
 
 .slider-navigation input:hover + label {
-	background-color: $highlight;
-	border: 1px solid darken($highlight, 10%);    
+	background-color: $highlight;  
 }
 
 .slider-navigation input:checked + label {
 	background-position: 0 0;
-	background-color: $secondary;
-	border: 1px solid darken($secondary, 10%);    
+	background-color: $secondary;   
 }

@@ -9,6 +9,10 @@ body {
 }
 
 a {
+	font-weight: 600;
+	color: $highlight;
+	text-decoration: none;
+	@include transition (color .15s linear);
     
     &:hover {
         text-decoration: underline;
@@ -32,7 +36,7 @@ h2 {
 }
 
 h3 {
-	margin: 15px 0 5px;
+	margin: 25px 0 5px;
 	font-family: $header-font;	
 	font-size: #{$modular-scale-up1}em;
 	text-transform: uppercase;

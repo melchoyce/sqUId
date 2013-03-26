@@ -127,25 +127,3 @@
 	font-size: #{$modular-scale-base}em;
 	background: $light;
 }
-
-.btn.left-icon,
-.btn.right-icon {
-	padding: 0 10px;
-	height: 40px; 
-	line-height: 40px;
-	font-weight: 600;
-}
-
-.left-icon:before {
-	float: left;
-	margin-right: 10px;
-	padding: 0 10px 0 0;
-	border-right: 1px solid rgba(0,0,0,.15);
-}
-
-.right-icon:before {
-	float: right;
-	margin-left: 10px;
-	padding: 0 0 0 10px;
-	border-left: 1px solid rgba(0,0,0,.15);
-}

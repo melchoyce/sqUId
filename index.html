@@ -24,26 +24,42 @@
 
 		<section id="forms">
 			<h2>Form Fields</h2>
-			<div class="row">
-				<input type="text" placeholder="active" />
-				<input type="text" placeholder="disabled" disabled />
-				<input type="text" class="success" placeholder="success" />
-				<input type="text" class="error" placeholder="error" />
+			<div id="inputs">
+				<h3>Inputs</h3>
+				<div class="row">
+					<input type="text" placeholder="active" />
+					<input type="text" placeholder="disabled" disabled />
+					<input type="text" class="success" placeholder="success" />
+					<input type="text" class="error" placeholder="error" />
+				</div>
 			</div>
-			<input type="radio" name="example" value="unchecked">Unchecked
-			<input type="radio" name="example" value="checked" checked>Checked
-			<input type="radio" name="example" value="disabled" disabled>Disabled
-			<select>
-				<option>Option 1</option>
-				<option>Option 2</option>
-				<option>Option 3</option>
-				<option>Option 4</option>
-				<option>Option 5</option>
-			</select>
+			<div id="radios">
+				<h3>Radio Buttons</h3>
+				<input type="radio" id="radio-unchecked" name="radio-example" /><label for="radio-unchecked"></label>
+				<input type="radio" id="radio-checked" name="radio-example" checked /><label for="radio-checked"></label>
+				<input type="radio" id="radio-disabled" name="radio-example" disabled /><label for="radio-disabled"></label>
+			</div>
+			<div id="checkboxes">
+				<h3>Checkboxes</h3>
+				<input type="checkbox" id="checkbox-unchecked" /><label for="checkbox-unchecked"></label>
+				<input type="checkbox" id="checkbox-checked" checked /><label for="checkbox-checked"></label>
+				<input type="checkbox" id="checkbox-disabled" disabled /><label for="checkbox-disabled"></label>
+			</div>
+			<div id="selects">
+				<h3>Select</h3>
+				<select>
+					<option>Option 1</option>
+					<option>Option 2</option>
+					<option>Option 3</option>
+					<option>Option 4</option>
+					<option>Option 5</option>
+				</select>
+			</div>
 		</section>
 		<section id="buttons">
 			<h2>Buttons</h2>
 			<div id="regular-buttons">
+				<h3>Button Styles</h3>
 				<div class="row">
 					<button class="btn">Default</button>
 					<button class="btn" disabled>Default</button>
@@ -62,6 +78,7 @@
 				</div>
 			</div>
 			<div id="button-sizes">
+				<h3>Button Sizes</h3>
 				<div class="row">
 					<button class="btn xsmall">X-Small</button>
 					<button class="btn small">Small</button>
@@ -101,6 +118,21 @@
 		
 		<section id="misc">
 			<h2>Miscellaneous</h2>
+			<div id="bars">
+				<h3>Progress Bars</h3>
+				<div class="progress-bar">
+					<span class="progress" style="width:20%;"></span>
+				</div>
+				<div class="progress-bar">
+					<span class="progress" style="width:50%;"></span>
+				</div>
+				<div class="progress-bar">
+					<span class="progress" style="width:80%;"></span>
+				</div>
+			</div>
+			<div id="tips">
+				<h3>Tooltips</h3>
+			</div>
 			<div id="rating">
 				<h3>Star Ratings</h3>
 				<fieldset class="star-ratings">

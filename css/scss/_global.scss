@@ -13,11 +13,8 @@ body {
 	background-color: $light;
 }
 
-a {
-	font-weight: 600;
-	color: $highlight;
-	text-decoration: none;
-	@include transition (color .15s linear);
+label {
+	display: block;
 }
 
 
@@ -41,7 +38,27 @@ section {
 	border-top: 1px solid $light;
 }
 
-#forms input {
+#forms {
+	@include clearfix;
+}
+
+#radios,
+#checkboxes,
+#selects {
+	float: left;
+}
+
+#radios,
+#checkboxes {
+	width: columns(2);
+	margin-right: gutter;
+}
+
+#selects {
+	width: columns(4);
+}
+
+#inputs input {
 	width: columns(2);
 	margin-right: gutter();
 }
@@ -69,4 +86,19 @@ section {
 	@include clearfix;
 }
 
+#bars .progress-bar {
+	margin: 15px 0;
+}
+
+#bars .progress-bar:nth-of-type(1) {
+	width: columns(4);
+}
+
+#bars .progress-bar:nth-of-type(2) {
+	width: columns(6);
+}
+
+#bars .progress-bar:nth-of-type(3) {
+	width: columns(8);
+}
 
