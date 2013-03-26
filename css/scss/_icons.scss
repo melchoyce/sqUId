@@ -3,8 +3,11 @@
 
 @font-face {
 	font-family: 'melicons';
-	src:url('../fonts/melicons.eot');
-}
+	src: url('../fonts/melicons.eot?#iefix') format('embedded-opentype'), 
+	     url('../fonts/melicons.woff') format('woff'), 
+	     url('../fonts/melicons.ttf')  format('truetype'),
+	     url('../fonts/melicons.svg#svgmelicons') format('svg');
+	}
 
 .icon-view, .icon-upload, .icon-up, .icon-trash, .icon-star, .icon-search, .icon-save, .icon-right, .icon-pencil, .icon-menu, .icon-mail, .icon-link, .icon-left, .icon-home, .icon-download, .icon-down, .icon-comment, .icon-cog, .icon-check, .icon-chat, .icon-cancel, .icon-attach, .icon-add {
 	font-family: 'melicons';

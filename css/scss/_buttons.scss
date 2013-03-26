@@ -92,3 +92,13 @@ button[disabled].btn {
 	opacity: .6;
     @include box-shadow(none);
 }
+
+.xsmall {
+	padding: 3px 7px;
+	font-size: #{$modular-scale-down2}em;
+}
+
+.small {
+	padding: 5px 10px;
+	font-size: #{$modular-scale-down1}em;
+}

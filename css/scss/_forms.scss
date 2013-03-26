@@ -9,6 +9,7 @@
 	border: 1px solid darken($input-bg, 10%);
 	@include border-radius(3px);
 	@include box-shadow(inset 0 2px 2px rgba(0,0,0,.05));
+	outline-color: lighten($dark, 20%);
 }
 
 input[disabled] {
@@ -20,10 +21,12 @@ input.success {
 	background-color: lighten($secondary, 50%);
 	border: 2px solid $secondary;
 	@include input-placeholder($secondary);
+	outline-color: lighten($secondary, 10%);
 }
 
 input.error {
 	background-color: lighten($highlight, 40%);	
 	border: 2px solid $highlight;
 	@include input-placeholder($highlight);
+	outline-color: lighten($highlight, 10%);
 }

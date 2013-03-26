@@ -17,6 +17,7 @@ a {
 	font-weight: 600;
 	color: $highlight;
 	text-decoration: none;
+	@include transition (color .15s linear);
 }
 
 

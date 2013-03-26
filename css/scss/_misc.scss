@@ -70,6 +70,7 @@
     white-space: nowrap;
     cursor: pointer;
     color: $light;
+	@include transition (color .15s linear);    
 }
 
 .star-ratings > input:checked ~ label,
