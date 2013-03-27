@@ -153,13 +153,18 @@ input[type="radio"]:checked + label {
 	position: relative;
 	margin-bottom: 10px;
 	padding: 0;
+	width: 100%;
 	height: 35px;
+	background-color: $dark;
+	border: 1px solid darken($dark, 10%);
+	@include border-radius(20px);
+	@include box-shadow(inset 0 0 3px rgba(0, 0, 0, 0.1));
+	text-transform: uppercase;	
 }
 
 .toggle label {
 	position: relative;
 	z-index: 3;
-	
 	display: block;
 	width: 100%;
 }
@@ -172,10 +177,10 @@ input[type="radio"]:checked + label {
 
 .toggle p {
 	position: absolute;
-	left: -100px;
+	left: -10%;
 	width: 100%;
 	margin: 0;
-	padding-right: 100px;
+	padding-right: 10%;
 	text-align: left;
 }
 
@@ -186,7 +191,7 @@ input[type="radio"]:checked + label {
 	z-index: 5;
 	display: block;
 	width: 50%;
-	margin-left: 100px;
+	margin-left: 10%;
 	text-align: center;
 }
 
@@ -199,17 +204,23 @@ input[type="radio"]:checked + label {
 	display: block;
 	position: absolute;
 	right: 0;
-	top: 0;
+	top: 0px;
 	padding: 0;
 	width: 50%;
 	height: 100%;
-	@include transition(all 0.3s ease-out);
+	background-color: $secondary;
+	border: 1px solid darken($secondary, 10%);
+	@include border-radius(18px);
+	@include transition(all 0.15s ease-in-out);
 }
 
 .toggle label,
 .toggle p {
 	line-height: 35px;
 	vertical-align: middle;
+	color: $light;
+	font-size: #{$modular-scale-down1}em;
+	font-weight: 400;
 }
 
 .toggle input:checked ~ .slide-button {
@@ -220,51 +231,71 @@ input[type="radio"]:checked + label {
 	outline: 1px dotted #888;
 }
 
+	// Reverse
 
-// Light
+	.toggle.toggle-reverse {
+		background-color: $secondary;
+		border: 1px solid darken($secondary, 10%);
+		@include border-radius(20px);
+		text-transform: uppercase;
+	}
 
-.toggle.light {
-	background-color: $light;
-	border: 1px solid darken($light, 10%);
-	@include border-radius(20px);
-	@include box-shadow(inset 0 0 3px rgba(0, 0, 0, 0.1));
-	text-transform: uppercase;
-}
+	.toggle.toggle-reverse .slide-button {
+		background-color: $dark;
+		border: 1px solid darken($dark, 10%);
+		@include border-radius(18px);
+	    @include box-shadow(0 0 3px rgba(0, 0, 0, 0.25));
+	}
 
-.toggle.light .slide-button {
-	background-color: darken($light, 10%);
-	border: 1px solid darken($light, 15%);
-	@include border-radius(18px);
-}
+	.toggle.toggle-reverse p {
+		color: $light;
+		font-weight: 400;
+	}
 
-.toggle.light p {
-	color: $dark;
-	font-weight: 400;
-}
+	// Icons
+
+	.toggle .toggle-icon {
+		padding-top: 8px;
+	}
+
+	// Sizes
+
+	.toggle-small {
+		width: 60px;
+		height: 25px;
+
+		label,
+		p {
+			line-height: 25px;
+		}
+
+		.toggle-icon {
+			padding-top: 5px;
+		}
+	}
+
+	.toggle-medium {
+		width: 100px;
+	}
+
+	.toggle-large {
+		width: 120px;
+		height: 40px;
+		@include border-radius(22px);
+
+		.slide-button {
+			@include border-radius(20px);
+		}
+
+		label,
+		p {
+			line-height: 40px;
+		}
+
+		.toggle-icon {
+			padding-top: 12px;
+		}
+	}
 
 
-// Dark
 
-.toggle.dark {
-	background-color: $dark;
-	border: 1px solid darken($dark, 10%);
-	@include border-radius(20px);
-	text-transform: uppercase;
-}
-
-.toggle.dark .slide-button {
-	background-color: $primary;
-	@include border-radius(18px);
-    @include box-shadow(0 0 3px rgba(0, 0, 0, 0.25));
-}
-
-.toggle.dark p {
-	color: $light;
-	font-weight: 400;
-}
-
-// Icons
-
-.toggle .toggle-icon {
-	padding-top: 8px;
-}
