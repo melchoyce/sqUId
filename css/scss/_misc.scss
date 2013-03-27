@@ -14,6 +14,7 @@
 	display: block;
 	height: 100%;
 	background-color: $primary;
+	border: 1px solid darken($primary, 5%);
 	@include border-radius(2px);
 }
 
@@ -88,6 +89,7 @@
     width: 1em;
     overflow: hidden;
     white-space: nowrap;
+    border: none;
     cursor: pointer;
     color: $light;
 	@include transition (color .15s linear);    
@@ -101,7 +103,10 @@
 .star-ratings > input:checked ~ label:hover,
 .star-ratings > input:checked ~ label:hover ~ label,
 .star-ratings > label:hover ~ input:checked ~ label {
+    position: static;
     color: $highlight;
+    background: none;
+    border: 0;
 }
 
 /* Slider Navigation */
@@ -117,12 +122,13 @@
 }
 
 .slider-navigation input {
-	opacity:0;
+	opacity: 0;
 	position: absolute;
 	cursor: pointer;
 }
 
 .slider-navigation input + label {
+	position: static;
 	display: inline-block;
 	margin-right: 5px;
 	width: 15px;
@@ -131,15 +137,17 @@
     vertical-align: middle;
 	background-color: $light;
     background-repeat: no-repeat;
+    border: 0;
 	@include border-radius(50%);
 	@include transition (background-color .15s linear); 
 }
 
-.slider-navigation input:hover + label {
-	background-color: $highlight;  
+.slider-navigation input + label:hover {
+	background-color: $highlight;
 }
 
 .slider-navigation input:checked + label {
 	background-position: 0 0;
 	background-color: $secondary;   
+	border: 0;
 }

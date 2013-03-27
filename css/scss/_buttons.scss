@@ -15,11 +15,16 @@
 	border: 1px solid darken($light, 10%);	
 	@include border-radius(3px);
     @include box-shadow(1px 1px 1px rgba(0, 0, 0, 0.1));
-	@include transition (background-color .15s linear);
+	@include transition (background-color .15s linear, border-color .15s linear);
 
 	&:hover {
 		background-color: darken($light, 5%);
 		border-color: darken($light, 15%);
+	}
+	&:active {
+		background-color: darken($light, 10%);
+		border-color: darken($light, 20%);
+		@include box-shadow(inset 1px 1px 1px rgba(0, 0, 0, 0.1));
 	}
 }
 button[disabled].btn:hover {
@@ -36,6 +41,11 @@ button[disabled].btn:hover {
 		background-color: darken($dark, 5%);
 		border-color: darken($dark, 15%);	
 	}
+	&:active {
+		background-color: darken($dark, 10%);
+		border-color: darken($dark, 20%);
+		@include box-shadow(inset 1px 1px 1px rgba(0, 0, 0, 0.1));
+	}
 }
 button[disabled].btn.btn-dark:hover {
 	background-color: $dark;
@@ -50,6 +60,11 @@ button[disabled].btn.btn-dark:hover {
 	&:hover {
 		background-color: darken($primary, 5%);
 		border-color: darken($primary, 15%);	
+	}
+	&:active {
+		background-color: darken($primary, 10%);
+		border-color: darken($primary, 20%);
+		@include box-shadow(inset 1px 1px 1px rgba(0, 0, 0, 0.1));
 	}
 }
 button[disabled].btn.btn-primary:hover {
@@ -66,6 +81,11 @@ button[disabled].btn.btn-primary:hover {
 		background-color: darken($secondary, 5%);
 		border-color: darken($secondary, 15%);	
 	}
+	&:active {
+		background-color: darken($secondary, 10%);
+		border-color: darken($secondary, 20%);
+		@include box-shadow(inset 1px 1px 1px rgba(0, 0, 0, 0.1));
+	}
 }
 button[disabled].btn.btn-secondary:hover {
 	background-color: $secondary;
@@ -80,6 +100,11 @@ button[disabled].btn.btn-secondary:hover {
 	&:hover {
 		background-color: darken($highlight, 5%);
 		border-color: darken($highlight, 15%);	
+	}
+	&:active {
+		background-color: darken($highlight, 10%);
+		border-color: darken($highlight, 20%);
+		@include box-shadow(inset 1px 1px 1px rgba(0, 0, 0, 0.1));
 	}
 }
 button[disabled].btn.btn-highlight:hover {

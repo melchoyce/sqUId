@@ -1,7 +1,12 @@
 /* =Forms
 -------------------------------------------------------------- */
 
-#{$all-text-inputs}, textarea {
+label {
+	display: block;
+}
+
+#{$all-text-inputs}, 
+textarea {
 	padding: 7px 0 7px 7px;
 	font-size: #{$modular-scale-down1}em;
 	color: $dark;
@@ -31,25 +36,27 @@ input.error {
 	outline-color: lighten($highlight, 10%);
 }
 
+
+// Checkboxes and radio buttons hacked from http://www.inserthtml.com/2012/06/custom-form-radio-checkbox/
+
 /* Checkboxes */
 
-input[type="checkbox"] {
-	display: none;
-}
-
 input[type="checkbox"] + label {
-	display: inline-block;
+	display: block;
 	position: relative;
-	padding: 10px;
+	margin: 10px 0;
+	height: 20px;
+	width: 20px;
 	background-color: lighten($light, 20%);
 	border: 1px solid darken($light, 10%);
 	@include border-radius(3px);
 	cursor: pointer;
-}
 
-input[type="checkbox"]:checked + label {
-	background-color: lighten($primary, 70%);
-	border: 1px solid lighten($primary, 10%);
+	span {
+		position: absolute;
+		margin: -1px 0 0 25px;
+		font-size: #{$modular-scale-down1}em;
+	}
 }
 
 input[type="checkbox"]:checked + label:after {
@@ -67,52 +74,197 @@ input[type="checkbox"]:checked + label:after {
 	-webkit-font-smoothing: antialiased;
 	content: "\63\68\65\63\6b";	
 	position: absolute;
-	top: 3px;
-	left: 3px;
+	top: 2px;
+	left: 2px;
 	color: $primary;
 }
 
-input[type="checkbox"]:disabled + label {
+
+/* Radio Buttons */
+
+input[type="radio"] + label {
+	display: block;
+	position: relative;
+	margin: 10px 0;
+	height: 20px;
+	width: 20px;
+	background-color: lighten($light, 20%);
+	border: 1px solid darken($light, 10%);
+	@include border-radius(50%);
+	cursor: pointer;
+}
+
+input[type="radio"]:checked + label:after {
+	position: absolute;
+	top: 3px;
+	left: 3px;
+	width: 12px;
+	height: 12px;
+	background-color: $primary;
+	border: none;
+	@include border-radius(50%);
+	content: ' ';
+	text-shadow: none;
+}
+
+input[type="radio"]:checked + label {
+	background-color: lighten($primary, 70%);
+	border: 1px solid lighten($primary, 10%);
+}
+
+/* Both */
+
+input[type="checkbox"],
+input[type="radio"] {
+	display: none;
+}
+
+input[type="checkbox"] + label,
+input[type="radio"] + label {
+	span {
+		position: absolute;
+		margin: -1px 0 0 25px;
+		font-size: #{$modular-scale-down1}em;
+	}
+}
+
+input[type="checkbox"]:disabled + label,
+input[type="radio"]:disabled + label {
 	background-color: darken($light, 10%);
 	border-color: darken($light, 20%);
 	opacity: .25;
 	cursor: default;
 }
 
+input[type="checkbox"]:checked + label,
+input[type="radio"]:checked + label {
+	background-color: lighten($primary, 70%);
+	border: 1px solid lighten($primary, 10%);
+}
 
-/* Radio Buttons */
+/* Toggles */
 
-/*input[type="radio"] {
+.toggle p span {
 	display: none;
 }
 
-input[type="radio"] + label {
-	-webkit-appearance: none;
-	background-color: #fafafa;
-	border: 1px solid #cacece;
-	padding: 9px;
-	border-radius: 50px;
-	display: inline-block;
+.toggle {
+	display: block;
 	position: relative;
+	margin-bottom: 10px;
+	padding: 0;
+	height: 35px;
 }
 
-input[type="radio"]:checked + label:after {
-	content: ' ';
-	width: 12px;
-	height: 12px;
-	border-radius: 50px;
+.toggle label {
+	position: relative;
+	z-index: 3;
+	
+	display: block;
+	width: 100%;
+}
+
+.toggle input {
 	position: absolute;
-	top: 3px;
-	background: #99a1a7;
-	text-shadow: 0px;
-	left: 3px;
-	font-size: 32px;
+	opacity: 0;
+	z-index: 5;
 }
 
-input[type="radio"]:checked + label {
-	background-color: #e9ecee;
-	color: #99a1a7;
-	border: 1px solid #adb8c0;
+.toggle p {
+	position: absolute;
+	left: -100px;
+	width: 100%;
+	margin: 0;
+	padding-right: 100px;
+	text-align: left;
 }
 
-*/
+.toggle p span {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 5;
+	display: block;
+	width: 50%;
+	margin-left: 100px;
+	text-align: center;
+}
+
+.toggle p span:last-child {
+	left: 50%;
+}
+
+.toggle .slide-button {
+	z-index: 4;
+	display: block;
+	position: absolute;
+	right: 0;
+	top: 0;
+	padding: 0;
+	width: 50%;
+	height: 100%;
+	@include transition(all 0.3s ease-out);
+}
+
+.toggle label,
+.toggle p {
+	line-height: 35px;
+	vertical-align: middle;
+}
+
+.toggle input:checked ~ .slide-button {
+	right: 50%;
+}
+
+.toggle input:focus ~ .slide-button {
+	outline: 1px dotted #888;
+}
+
+
+// Light
+
+.toggle.light {
+	background-color: $light;
+	border: 1px solid darken($light, 10%);
+	@include border-radius(20px);
+	@include box-shadow(inset 0 0 3px rgba(0, 0, 0, 0.1));
+	text-transform: uppercase;
+}
+
+.toggle.light .slide-button {
+	background-color: darken($light, 10%);
+	border: 1px solid darken($light, 15%);
+	@include border-radius(18px);
+}
+
+.toggle.light p {
+	color: $dark;
+	font-weight: 400;
+}
+
+
+// Dark
+
+.toggle.dark {
+	background-color: $dark;
+	border: 1px solid darken($dark, 10%);
+	@include border-radius(20px);
+	text-transform: uppercase;
+}
+
+.toggle.dark .slide-button {
+	background-color: $primary;
+	@include border-radius(18px);
+    @include box-shadow(0 0 3px rgba(0, 0, 0, 0.25));
+}
+
+.toggle.dark p {
+	color: $light;
+	font-weight: 400;
+}
+
+// Icons
+
+.toggle .toggle-icon {
+	padding-top: 8px;
+}

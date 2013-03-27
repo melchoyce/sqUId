@@ -13,11 +13,6 @@ body {
 	background-color: $light;
 }
 
-label {
-	display: block;
-}
-
-
 /* Structure */
 
 #container {
@@ -44,23 +39,30 @@ section {
 
 #radios,
 #checkboxes,
+#toggles,
 #selects {
 	float: left;
 }
 
 #radios,
-#checkboxes {
+#checkboxes,
+#toggles {
 	width: columns(2);
-	margin-right: gutter;
+	margin-right: gutter();
 }
 
 #selects {
-	width: columns(4);
+	width: columns(3);
+	margin-right: 0;
 }
 
 #inputs input {
 	width: columns(2);
 	margin-right: gutter();
+}
+
+.toggle {
+	width: 60%;
 }
 
 #regular-buttons .btn {

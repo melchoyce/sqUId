@@ -36,10 +36,12 @@ h2 {
 }
 
 h3 {
-	margin: 25px 0 5px;
-	font-family: $header-font;	
-	font-size: #{$modular-scale-up1}em;
+	margin: 25px 0 10px;
+	font-family: $body-font;	
+	font-size: #{$modular-scale-base}em;
+	font-weight: 600;
 	text-transform: uppercase;
+	color: lighten($dark, 10%);
 }
 
 h4 {

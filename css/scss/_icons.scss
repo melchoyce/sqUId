@@ -126,4 +126,29 @@
 	width: 15em;
 	font-size: #{$modular-scale-base}em;
 	background: $light;
+	@include border-radius(3px);
+}
+
+#icons-14,
+#icons-16,
+#icons-42 {
+	margin: 20px 0;
+	padding: 0 0 20px 0;
+	border-bottom: 1px solid $light;
+
+	span {
+		padding: 0 10px 0 0;
+	}
+}
+
+#icons-14 {
+	font-size: #{$modular-scale-down1}em;
+}
+
+#icons-16 {
+	font-size: #{$modular-scale-up1}em;
+}
+
+#icons-42 {
+	font-size: #{$modular-scale-up4}em;
 }
