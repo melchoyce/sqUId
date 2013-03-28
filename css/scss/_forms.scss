@@ -208,8 +208,8 @@ input[type="radio"]:checked + label {
 	padding: 0;
 	width: 50%;
 	height: 100%;
-	background-color: $secondary;
-	border: 1px solid darken($secondary, 10%);
+	background-color: $primary;
+	border: 1px solid darken($primary, 10%);
 	@include border-radius(18px);
 	@include transition(all 0.15s ease-in-out);
 }
